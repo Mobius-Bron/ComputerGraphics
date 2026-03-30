@@ -1,0 +1,12 @@
+cd C:\UnrealProjects\ComputerGraphics
+
+2
+g++ OneWeekend\src\2_OutputMyImage.cpp -o OneWeekend\src\2_OutputMyImage.exe
+OneWeekend\src\2_OutputMyImage.exe  >  OneWeekend\output\2_output_my_image.ppm
+
+3
+g++ OneWeekend\src\3_Vec.cpp OneWeekend\private\vec3.cpp -o OneWeekend\src\3_Vec.exe
+OneWeekend\src\3_Vec.exe  >  OneWeekend\output\3_Vec_image.ppm
+
+OneWeekend\src\3_Vec.exe  >  OneWeekend\output\3_Vec_image.ppm
+
