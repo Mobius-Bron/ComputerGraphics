@@ -12,3 +12,6 @@ OneWeekend\src\3_Vec.exe  >  OneWeekend\output\3_Vec_image.ppm
 g++ OneWeekend\src\4_Ray.cpp OneWeekend\private\ray.cpp OneWeekend\private\vec3.cpp -o OneWeekend\src\4_Ray.exe
 OneWeekend\src\4_Ray.exe  >  OneWeekend\output\4_Ray_image.ppm
 
+5
+g++ OneWeekend\src\5_Ball.cpp OneWeekend\private\ray.cpp OneWeekend\private\vec3.cpp -o OneWeekend\src\5_Ball.exe
+OneWeekend\src\5_Ball.exe  >  OneWeekend\output\5_Ball_image.ppm
