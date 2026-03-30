@@ -3,15 +3,30 @@ cd C:\UnrealProjects\ComputerGraphics
 2
 g++ OneWeekend\src\2_OutputMyImage.cpp -o OneWeekend\src\2_OutputMyImage.exe
 OneWeekend\src\2_OutputMyImage.exe  >  OneWeekend\output\2_output_my_image.ppm
+OneWeekend\src\2_OutputMyImage.exe
 
 3
 g++ OneWeekend\src\3_Vec.cpp OneWeekend\private\vec3.cpp -o OneWeekend\src\3_Vec.exe
 OneWeekend\src\3_Vec.exe  >  OneWeekend\output\3_Vec_image.ppm
+OneWeekend\src\3_Vec.exe
 
 4
 g++ OneWeekend\src\4_Ray.cpp OneWeekend\private\ray.cpp OneWeekend\private\vec3.cpp -o OneWeekend\src\4_Ray.exe
 OneWeekend\src\4_Ray.exe  >  OneWeekend\output\4_Ray_image.ppm
+OneWeekend\src\4_Ray.exe
 
 5
 g++ OneWeekend\src\5_Ball.cpp OneWeekend\private\ray.cpp OneWeekend\private\vec3.cpp -o OneWeekend\src\5_Ball.exe
 OneWeekend\src\5_Ball.exe  >  OneWeekend\output\5_Ball_image.ppm
+OneWeekend\src\5_Ball.exe
+
+6
+g++ OneWeekend\src\6_HitableList.cpp ^
+    OneWeekend\private\vec3.cpp ^
+    OneWeekend\private\ray.cpp ^
+    OneWeekend\private\Object\hittable.cpp ^
+    OneWeekend\private\Object\sphere.cpp ^
+    OneWeekend\private\hittable_list.cpp ^
+    -o OneWeekend\src\6_HitableList.exe
+OneWeekend\src\6_HitableList.exe  >  OneWeekend\output\6_HitableList_image.ppm
+OneWeekend\src\6_HitableList.exe
