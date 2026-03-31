@@ -82,3 +82,19 @@ g++ OneWeekend\src\10_Dielectric.cpp ^
     OneWeekend\private\Material\dielectric.cpp ^
     -o OneWeekend\src\10_Dielectric.exe
 OneWeekend\src\10_Dielectric.exe  >  OneWeekend\output\10_Dielectric_image.ppm
+
+11
+g++ OneWeekend\src\11_Camera.cpp ^
+    OneWeekend\private\ray.cpp ^
+    OneWeekend\private\vec3.cpp ^
+    OneWeekend\private\camera.cpp ^
+    OneWeekend\private\rtweekend.cpp ^
+    OneWeekend\private\hittable_list.cpp ^
+    OneWeekend\private\Object\hittable.cpp ^
+    OneWeekend\private\Object\sphere.cpp ^
+    OneWeekend\private\Material\material.cpp ^
+    OneWeekend\private\Material\lambertian.cpp ^
+    OneWeekend\private\Material\metal.cpp ^
+    OneWeekend\private\Material\dielectric.cpp ^
+    -o OneWeekend\src\11_Camera.exe
+OneWeekend\src\11_Camera.exe  >  OneWeekend\output\11_Camera_image.ppm
