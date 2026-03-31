@@ -19,8 +19,8 @@ vec3 ray_color(const ray& r, const hittable& world)
 }
 
 int main() {
-    const int image_width = 480;
-    const int image_height = 270;
+    const int image_width = 720;
+    const int image_height = 480;
     const int samples_per_pixel = 100;
 
     std::cout << "P3\n" << image_width << " " << image_height << "\n255\n";

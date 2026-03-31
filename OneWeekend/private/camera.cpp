@@ -2,12 +2,19 @@
 #include"../public/vec3.h"
 #include"../public/ray.h"
 
-camera::camera(int image_width, int image_height)
+camera::camera(int image_width, int image_height) 
  {
-    lower_left_corner = vec3(-2.0, -1.0, -1.0);
-    horizontal = vec3(image_width/100, 0.0, 0.0);
-    vertical = vec3(0.0, image_height/100, 0.0);
+    const double aspect_ratio = double(image_width) / image_height;
+    const double viewport_height = 2.0;
+    const double viewport_width = aspect_ratio * viewport_height;
+    const double focal_length = 1.0;
+
     origin = vec3(0.0, 0.0, 0.0);
+    
+    horizontal = vec3(viewport_width, 0.0, 0.0);
+    vertical = vec3(0.0, viewport_height, 0.0);
+    
+    lower_left_corner = origin - horizontal/2 - vertical/2 - vec3(0, 0, focal_length);
 }
 
 ray camera::get_ray(double u, double v) 
