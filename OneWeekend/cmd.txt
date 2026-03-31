@@ -39,3 +39,30 @@ g++ OneWeekend\src\7_AntiAliasing.cpp ^
     OneWeekend\private\hittable_list.cpp ^
     -o OneWeekend\src\7_AntiAliasing.exe
 OneWeekend\src\7_AntiAliasing.exe  >  OneWeekend\output\7_AntiAliasing_image.ppm
+
+8
+g++ OneWeekend\src\8_DiffuseMaterial.cpp ^
+    OneWeekend\private\vec3.cpp ^
+    OneWeekend\private\ray.cpp ^
+    OneWeekend\private\rtweekend.cpp ^
+    OneWeekend\private\camera.cpp ^
+    OneWeekend\private\Object\hittable.cpp ^
+    OneWeekend\private\Object\sphere.cpp ^
+    OneWeekend\private\hittable_list.cpp ^
+    -o OneWeekend\src\8_DiffuseMaterial.exe
+OneWeekend\src\8_DiffuseMaterial.exe  >  OneWeekend\output\8_DiffuseMaterial_image.ppm
+
+9
+g++ OneWeekend\src\9_Metal.cpp ^
+    OneWeekend\private\ray.cpp ^
+    OneWeekend\private\vec3.cpp ^
+    OneWeekend\private\camera.cpp ^
+    OneWeekend\private\rtweekend.cpp ^
+    OneWeekend\private\hittable_list.cpp ^
+    OneWeekend\private\Object\hittable.cpp ^
+    OneWeekend\private\Object\sphere.cpp ^
+    OneWeekend\private\Material\material.cpp ^
+    OneWeekend\private\Material\lambertian.cpp ^
+    OneWeekend\private\Material\metal.cpp ^
+    -o OneWeekend\src\9_Metal.exe
+OneWeekend\src\9_Metal.exe  >  OneWeekend\output\9_Metal_image.ppm

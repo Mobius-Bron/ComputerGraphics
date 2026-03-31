@@ -27,6 +27,10 @@ public:
     void write_color(std::ostream &out);
     void write_color(std::ostream &out, int samples_per_pixel);
 
+    static vec3 random();
+
+    static vec3 random(double min, double max);
+    
 private:
     double e[3];
 };
@@ -41,6 +45,11 @@ vec3 operator/(vec3 v, double t);
 
 double dot(const vec3 &u, const vec3 &v);
 vec3 cross(const vec3 &u, const vec3 &v);
+vec3 reflect(const vec3& v, const vec3& n);
 vec3 unit_vector(vec3 v);
+
+vec3 random_in_unit_sphere();
+
+vec3 random_unit_vector();
 
 #endif

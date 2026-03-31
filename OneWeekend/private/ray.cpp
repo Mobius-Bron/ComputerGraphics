@@ -1,4 +1,5 @@
 #include "../public/ray.h"
+#include "../public/vec3.h"
 
 ray::ray() {}
 

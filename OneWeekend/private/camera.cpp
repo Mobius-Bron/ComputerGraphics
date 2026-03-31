@@ -1,6 +1,4 @@
 #include"../public/camera.h"
-#include"../public/vec3.h"
-#include"../public/ray.h"
 
 camera::camera(int image_width, int image_height) 
  {

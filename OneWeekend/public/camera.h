@@ -2,9 +2,8 @@
 #define CAMERA_H
 
 #include "rtweekend.h"
-class ray;
-class vec3;
-
+#include "vec3.h"
+#include "ray.h"
 
 class camera {
 public:
