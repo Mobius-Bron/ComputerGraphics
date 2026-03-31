@@ -66,3 +66,19 @@ g++ OneWeekend\src\9_Metal.cpp ^
     OneWeekend\private\Material\metal.cpp ^
     -o OneWeekend\src\9_Metal.exe
 OneWeekend\src\9_Metal.exe  >  OneWeekend\output\9_Metal_image.ppm
+
+10 
+g++ OneWeekend\src\10_Dielectric.cpp ^
+    OneWeekend\private\ray.cpp ^
+    OneWeekend\private\vec3.cpp ^
+    OneWeekend\private\camera.cpp ^
+    OneWeekend\private\rtweekend.cpp ^
+    OneWeekend\private\hittable_list.cpp ^
+    OneWeekend\private\Object\hittable.cpp ^
+    OneWeekend\private\Object\sphere.cpp ^
+    OneWeekend\private\Material\material.cpp ^
+    OneWeekend\private\Material\lambertian.cpp ^
+    OneWeekend\private\Material\metal.cpp ^
+    OneWeekend\private\Material\dielectric.cpp ^
+    -o OneWeekend\src\10_Dielectric.exe
+OneWeekend\src\10_Dielectric.exe  >  OneWeekend\output\10_Dielectric_image.ppm
