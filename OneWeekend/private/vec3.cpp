@@ -1,4 +1,5 @@
 #include "../public/vec3.h"
+#include "../public/rtweekend.h"
 
 vec3::vec3() : e{0, 0, 0} {}
 
@@ -62,6 +63,19 @@ void vec3::write_color(std::ostream &out) {
     out << static_cast<int>(255.999 * e[0]) << ' '
         << static_cast<int>(255.999 * e[1]) << ' '
         << static_cast<int>(255.999 * e[2]) << '\n';
+}
+
+void vec3::write_color(std::ostream &out, int samples_per_pixel) {
+    // Divide the color total by the number of samples.
+    auto scale = 1.0 / samples_per_pixel;
+    auto r = scale * e[0];
+    auto g = scale * e[1];
+    auto b = scale * e[2];
+
+    // Write the translated [0,255] value of each color component.
+    out << static_cast<int>(256 * clamp(r, 0.0, 0.999)) << ' '
+        << static_cast<int>(256 * clamp(g, 0.0, 0.999)) << ' '
+        << static_cast<int>(256 * clamp(b, 0.0, 0.999)) << '\n';
 }
 
 std::ostream& operator<<(std::ostream &out, const vec3 &v) {

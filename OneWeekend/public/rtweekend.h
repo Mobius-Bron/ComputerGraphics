@@ -5,6 +5,8 @@
 #include <cstdlib>
 #include <limits>
 #include <memory>
+#include <functional>
+#include <random>
 
 // Usings
 
@@ -18,11 +20,19 @@ const double pi = 3.1415926535897932385;
 
 // Utility Functions
 
-inline double degrees_to_radians(double degrees);
+// 常用数学计算
+double degrees_to_radians(double degrees);
 
-inline double ffmin(double a, double b);
+double ffmin(double a, double b);
 
-inline double ffmax(double a, double b);
+double ffmax(double a, double b);
+
+double clamp(double x, double min, double max);
+
+// 随机数
+double random_double();
+
+double random_double(double min, double max);
 
 // Common Headers
 

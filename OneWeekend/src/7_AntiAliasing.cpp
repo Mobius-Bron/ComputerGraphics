@@ -4,9 +4,11 @@
 #include "../public/rtweekend.h"
 #include "../public/hittable_list.h"
 #include "../public/object/sphere.h"
+#include "../public/Object/hittable.h"
 #include "../public/camera.h"
 
-vec3 ray_color(const ray& r, const hittable& world) {
+vec3 ray_color(const ray& r, const hittable& world) 
+{
     hit_record rec;
     if (world.hit(r, 0, infinity, rec)) {
         return 0.5 * (rec.normal + vec3(1,1,1));
@@ -18,27 +20,28 @@ vec3 ray_color(const ray& r, const hittable& world) {
 
 int main() {
     const int image_width = 480;
-    const int image_height = 360;
+    const int image_height = 270;
+    const int samples_per_pixel = 100;
 
-    std::cout << "P3\n" << image_width << ' ' << image_height << "\n255\n";
+    std::cout << "P3\n" << image_width << " " << image_height << "\n255\n";
 
     hittable_list world;
     world.add(make_shared<sphere>(vec3(0,0,-1), 0.5));
     world.add(make_shared<sphere>(vec3(-1,0,-2), 0.7));
     world.add(make_shared<sphere>(vec3(2,0,-2), 1));
     world.add(make_shared<sphere>(vec3(0,-100.5,-1), 100));
-
     camera cam(image_width, image_height);
-
     for (int j = image_height-1; j >= 0; --j) {
         std::cerr << "\rScanlines remaining: " << j << ' ' << std::flush;
         for (int i = 0; i < image_width; ++i) {
-            auto u = double(i) / image_width;
-            auto v = double(j) / image_height;
-            ray r = cam.get_ray(u, v);
-            vec3 color = ray_color(r, world);
-
-            color.write_color(std::cout);
+            vec3 color(0, 0, 0);
+            for (int s = 0; s < samples_per_pixel; ++s) {
+                auto u = (i + random_double()) / image_width;
+                auto v = (j + random_double()) / image_height;
+                ray r = cam.get_ray(u, v);
+                color += ray_color(r, world);
+            }
+            color.write_color(std::cout, samples_per_pixel);
         }
     }
 

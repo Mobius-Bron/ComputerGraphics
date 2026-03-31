@@ -25,6 +25,7 @@ public:
     double length() const;
     double length_squared() const;
     void write_color(std::ostream &out);
+    void write_color(std::ostream &out, int samples_per_pixel);
 
 private:
     double e[3];
